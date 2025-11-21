@@ -3,6 +3,7 @@ import Services from "@/components/Services";
 import WritingShowcase from "@/components/WritingShowcase";
 import DesignShowcase from "@/components/DesignShowcase";
 import Testimonials from "@/components/Testimonials";
+import PDFDownload from "@/components/PDFDownload";
 import CTA from "@/components/CTA";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <WritingShowcase />
       <DesignShowcase />
       <Testimonials />
+      <PDFDownload />
       <CTA />
     </div>
   );
