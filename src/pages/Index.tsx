@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WritingShowcase from "@/components/WritingShowcase";
 import DesignShowcase from "@/components/DesignShowcase";
+import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <Services />
       <WritingShowcase />
       <DesignShowcase />
+      <Testimonials />
       <CTA />
     </div>
   );
