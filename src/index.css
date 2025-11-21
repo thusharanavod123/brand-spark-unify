@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
@@ -39,13 +39,13 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    --hero-gradient-from: 0 0% 0%;
-    --hero-gradient-to: 0 0% 15%;
-    
+    --hero-gradient-from: 240 5% 96%;
+    --hero-gradient-to: 0 0% 100%;
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
-    --shadow-glow: 0 0 40px hsl(0 0% 0% / 0.1);
+
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(220 70% 60% / 0.2);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 10%;
@@ -85,10 +85,10 @@ All colors MUST be HSL.
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 0 0% 100%;
-    
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 100% / 0.1);
-    --shadow-glow: 0 0 40px hsl(0 0% 100% / 0.05);
-    
+
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 40px hsl(220 70% 60% / 0.2);
+
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 0 0% 100%;
