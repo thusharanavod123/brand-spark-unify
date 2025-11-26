@@ -1,59 +1,76 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { useState, useCallback } from 'react';
+// Image reference remains a string pointing to the public path
+import { Textarea } from '@/components/ui/textarea';
+
+// --- Main Hero Component (Cleaned up, no Gemini code) ---
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-auto md:min-h-screen py-20 flex items-center bg-gray-900 text-white overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroBg} 
-          alt="Digital Communication Services" 
+          // FIX: Static path reference
+          src="/src/assets/hero-bg.jpg" 
+          alt="Digital Communication Specialist Background Abstract Design" 
           className="w-full h-full object-cover"
+          loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-hero-from/95 to-hero-to/90" />
+        {/* Adjusted Gradient to use the Indigo/Cyan color scheme for professionalism */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/90 to-cyan-900/80 backdrop-blur-sm" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-20 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground leading-tight">
-            Transform Ideas Into
-            <span className="block mt-2 bg-gradient-to-r from-accent via-accent to-orange-400 bg-clip-text text-transparent">
-              High-Converting Assets
+      <div className="relative z-10 container mx-auto px-6 py-20 grid md:grid-cols-12 gap-12 items-center">
+        
+        {/* Main Text Content (Now spans all 12 columns on MD+, centered) */}
+        <div className="md:col-span-12 space-y-6 text-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg max-w-4xl mx-auto">
+            <span className="block text-gray-100">The Unified Freelancer:</span>
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-indigo-500">
+                Copywriting & Design, Simplified.
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Your dedicated digital communication specialist. I deliver powerful Graphic Design, 
-            persuasive Copywriting, engaging Script Writing, and precise Email Funnels that 
-            consistently drive clicks, conversions, and sales.
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            I turn your ideas into **high-converting assets**—delivering professional, cohesive results that attract the right audience on Fiverr and beyond.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-glow transition-all hover:scale-105"
+              // Primary button uses Indigo for action
+              className="bg-indigo-600 hover:bg-indigo-700 text-lg shadow-lg"
+              asChild
             >
-              Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <a href="#contact">
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8 py-6 text-lg backdrop-blur-sm"
+              className="border-2 border-gray-500/50 text-gray-300 hover:bg-gray-800 text-lg backdrop-blur-sm"
+              asChild
             >
-              View Services
+              <a href="#services">
+                View Services
+              </a>
             </Button>
           </div>
         </div>
+
+        {/* Removed the Gemini Feature Area (md:col-span-5) */}
+
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-accent rounded-full" />
+      {/* Scroll Indicator (Styling adapted to new theme) */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce hidden md:block">
+        <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex items-start justify-center p-1.5">
+          <div className="w-1 h-3 bg-indigo-500 rounded-full" />
         </div>
       </div>
     </section>
