@@ -26,7 +26,7 @@ const CTA = () => {
           
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Let's transform your ideas into powerful marketing assets that drive real results. 
-            **Click the button below to view my available Fiverr Gigs.**
+            Click the button below to view my available Fiverr Gigs.
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto pt-6">

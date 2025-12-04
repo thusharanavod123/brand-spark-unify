@@ -35,7 +35,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            I turn your ideas into **high-converting assets**—delivering professional, cohesive results that attract the right audience on Fiverr and beyond.
+            I Turn your ideas into High-Converting Assets Delivering Professional, Cohesive Results that attract the right Audience on Fiverr and beyond.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
@@ -56,9 +56,9 @@ const Hero = () => {
               className="border-2 border-gray-500/50 text-gray-300 hover:bg-gray-800 text-lg backdrop-blur-sm"
               asChild
             >
-              <a href="#services">
+              {/* <a href="#services">
                 View Services
-              </a>
+              </a> */}
             </Button>
           </div>
         </div>
